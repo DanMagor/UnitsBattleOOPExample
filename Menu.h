@@ -4,7 +4,7 @@ class Menu {
 public:
 	void start();
 	Menu();
-	void battle(Unit,Unit);
+	void battle(Unit*,Unit*);
 
 protected: 
 };

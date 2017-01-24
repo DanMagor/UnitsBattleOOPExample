@@ -47,7 +47,7 @@ void Menu::start() {
 	}
 	switch (key)
 	{
-	case 1: std::cout << "\t\t\tYou choose warrior\n\n"; hero2 = new Warrior("Warrior2"); break;
+	case 1: std::cout << "\t\t\tYou choose warrior\n\n"; hero2 =new Warrior("Warrior2"); break;
 	case 2: std::cout << "\t\t\tYou choose rogue\n\n"; hero2 = new Rogue("Rogue2"); break;
 	//case 3: std::cout << "\t\t\tYou choose mage\n\n"; hero2 = new Mage("Mage2"); break;
 	default:
@@ -55,20 +55,20 @@ void Menu::start() {
 		break;
 	}
 
-	battle(*hero1, *hero2);
+	battle(hero1, hero2);
 }
 
-void Menu::battle(Unit hero1, Unit hero2)
+void Menu::battle(Unit *hero1, Unit *hero2)
 {
-	std::cout << "\n\n\t\t" << hero1.get_name() << "\tVS\t " << hero2.get_name() << "\n\n";
+	std::cout << "\n\n\t\t" << hero1->get_name() << "\tVS\t " << hero2->get_name() << "\n\n";
 	std::cout << "\t\t\t FIGHT\t\t\t";
 	Sleep(4000);
 	system("CLS");
-	std::cout<<hero1.get_health()<<hero2.get_health();
-	while (hero1.get_health() > 0 || hero2.get_health() > 0) {
+	std::cout<<hero1->get_health()<<hero2->get_health();
+	while (hero1->get_health() > 0 || hero2->get_health() > 0) {
 		
-		hero1.attack(&hero2);
+		hero1->attack(hero2);
 		Sleep(1000);
-		hero2.attack(&hero1);
+		hero2->attack(hero1);
 	}
 }
