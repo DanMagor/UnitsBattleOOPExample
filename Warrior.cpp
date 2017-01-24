@@ -4,12 +4,14 @@
 
 Warrior::Warrior(std::string name):Unit(name)
 {
-	health = 320;
 	strength = 10;
+	health = 420;
 	agility = 3;
+	criticaldamage = 1;
+	spelldamage = 0;
 }
 
 void Warrior::attack(Unit enemy) {
 	Unit::attack(enemy);
-	std::cout << get_strength()*2.4 <<" damage" << "\n";
+	std::cout << get_damage() <<" damage" << "\n";
 }
