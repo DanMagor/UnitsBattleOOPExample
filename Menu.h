@@ -1,9 +1,10 @@
 #pragma once
+#include "Unit.h"
 class Menu {
 public:
 	void start();
 	Menu();
-	void battle(int, int);
+	void battle(Unit,Unit);
 
 protected: 
 };
