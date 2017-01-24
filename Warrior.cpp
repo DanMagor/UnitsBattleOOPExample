@@ -14,4 +14,5 @@ Warrior::Warrior(std::string name):Unit(name)
 void Warrior::attack(Unit enemy) {
 	Unit::attack(enemy);
 	std::cout << get_damage() <<" damage" << "\n";
+
 }

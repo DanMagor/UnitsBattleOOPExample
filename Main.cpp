@@ -5,7 +5,7 @@
 #include "Warrior.h"
 #include "Rogue.h"
 #include <iostream>
-
+#include "Menu.h"
 int main()
 {
 	Warrior warrior("Alex");
@@ -15,6 +15,8 @@ int main()
 	std::cout << rogue.get_name()<<"\n";
 	rogue.attack(warrior);
 	warrior.damage(warrior);
+	Menu menu;
+	menu.start();
 	system("pause");
     return 0;
 }
