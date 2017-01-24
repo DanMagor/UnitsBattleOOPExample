@@ -15,7 +15,8 @@ int main()
 	std::cout << rogue.get_name()<<"\n";
 	std::cout<<warrior.get_health();
 	rogue.attack(&warrior);
-	std::cout << warrior.get_health();
+	rogue.damage(&warrior);
+	//std::cout << warrior.get_health();
 	Menu menu;
 	menu.start();
 	system("pause");

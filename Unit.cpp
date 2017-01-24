@@ -31,7 +31,6 @@ int Unit::get_health()
 
 int Unit::get_criticaldamage()
 {
-	srand(time(NULL));
 	int c = 1 + rand() % 6;
 	if (c == 6) return criticaldamage;
 	else return 1;
@@ -39,15 +38,21 @@ int Unit::get_criticaldamage()
 
 int Unit::get_spelldamage()
 {
-	srand(time(NULL));
 	int s = 1 + rand() % 6;
 	if (s == 6) return spelldamage * 2;
 	else return spelldamage;
 }
 
+int Unit::get_range()
+{
+	int r = rand() % 6;	
+	return r;
+}
+
 int Unit::get_damage()
 {
-	return get_strength()*2.4 * get_criticaldamage() + get_spelldamage();
+	srand(time(NULL));
+	return (get_strength()*2.4 + get_range())* get_criticaldamage() + get_spelldamage();
 }
 
 void Unit::attack(Unit *enemy)
@@ -63,8 +68,8 @@ void Unit::take_damage(int a)
 }
 
 
-void Unit::damage(Unit character)
+void Unit::damage(Unit *character)
 {
-	std::cout << name << " has " << character.get_health() << " HP\n";
+	std::cout << name << " has " << character->get_health() << " HP\n";
 }
 
