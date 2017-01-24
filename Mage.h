@@ -5,8 +5,5 @@ class Mage : public Unit
 {
 public:
 	Mage(std::string);
-	void attack(Unit enemy);
-
-private:
-	int mana;
+	void attack(Unit *enemy);
 };
