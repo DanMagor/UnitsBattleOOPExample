@@ -11,7 +11,7 @@ Warrior::Warrior(std::string name):Unit(name)
 	spelldamage = 0;
 }
 
-void Warrior::attack(Unit enemy) {
+void Warrior::attack(Unit *enemy) {
 	Unit::attack(enemy);
 	std::cout << get_damage() <<" damage" << "\n";
 

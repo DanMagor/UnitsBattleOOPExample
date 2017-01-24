@@ -5,5 +5,5 @@ class Rogue : public Warrior
 {
 public:
 	Rogue(std::string);
-	void attack(Unit enemy);
+	void attack(Unit *enemy);
 };

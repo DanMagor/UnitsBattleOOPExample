@@ -5,7 +5,7 @@ class Unit
 public:
 	Unit(std::string); //конструктор
 	virtual int get_health();
-	virtual void attack(Unit); //полиморфизм
+	virtual void attack(Unit*); //полиморфизм
 	virtual void damage(Unit);
 	virtual int get_damage();
 	virtual int get_criticaldamage();

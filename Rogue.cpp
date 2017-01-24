@@ -11,9 +11,9 @@ Rogue::Rogue(std::string name) : Warrior(name)
 	spelldamage = 0;
 }
 	
-void Rogue::attack(Unit enemy) {
+void Rogue::attack(Unit *enemy) {
 	Unit::attack(enemy);
 	int a = get_damage();
 	std::cout << a << " damage" << "\n";
-	enemy.take_damage(a);
+	enemy->take_damage(a);
 }

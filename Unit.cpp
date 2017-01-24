@@ -50,9 +50,9 @@ int Unit::get_damage()
 	return get_strength()*2.4 * get_criticaldamage() + get_spelldamage();
 }
 
-void Unit::attack(Unit enemy)
+void Unit::attack(Unit *enemy)
 {
-	std::cout << name << "  attack  " << enemy.get_name()<<"\n";
+	std::cout << name << "  attack  " << enemy->get_name()<<"\n";
 	std::cout << name << " deal ";
 }
 
