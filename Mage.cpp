@@ -1,17 +1,16 @@
 #include "stdafx.h"
-#include "Warrior.h"
+#include "Mage.h"
 #include <iostream>
 
-Warrior::Warrior(std::string name):Unit(name)
+Mage::Mage(std::string name) :Unit(name)
 {
-	strength = 10;
-	health = 420;
-	agility = 3;
+	strength = 4;
+	health = 320;
 	criticaldamage = 1;
-	spelldamage = 0;
+	spelldamage = 15;
 }
 
-void Warrior::attack(Unit *enemy) {
+void Mage::attack(Unit *enemy) {
 	Unit::attack(enemy);
 	int a = get_damage();
 	std::cout << a << " damage" << "\n";

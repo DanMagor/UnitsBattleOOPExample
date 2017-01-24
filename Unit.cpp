@@ -39,13 +39,13 @@ int Unit::get_criticaldamage()
 int Unit::get_spelldamage()
 {
 	int s = 1 + rand() % 6;
-	if (s == 6) return spelldamage * 2;
+	if (s == 6) return spelldamage * 2.5;
 	else return spelldamage;
 }
 
 int Unit::get_range()
 {
-	int r = rand() % 6;	
+	int r = rand() % 10;	
 	return r;
 }
 
