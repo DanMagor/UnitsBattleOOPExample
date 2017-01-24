@@ -12,4 +12,5 @@ Warrior::Warrior(std::string name):Unit(name)
 void Warrior::attack(Unit enemy) {
 	Unit::attack(enemy);
 	std::cout << get_strength()*2.4 <<" damage" << "\n";
+	
 }

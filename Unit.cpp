@@ -15,7 +15,8 @@ int Unit::get_health()
 void Unit::attack(Unit enemy)
 {
 	std::cout << name << "  attack  " << enemy.get_name()<<"\n";
-	std::cout << name << " deal ";
+	std::cout << name << " deal "; 
+	
 }
 
 void Unit::damage(Unit character)

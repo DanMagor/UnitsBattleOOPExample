@@ -22,4 +22,5 @@ int Rogue::get_critical()
 void Rogue::attack(Unit enemy) {
 	Unit::attack(enemy);
 	std::cout << get_strength()*2.4 * get_critical() << " damage" << "\n";
+
 }
